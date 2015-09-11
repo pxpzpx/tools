@@ -247,3 +247,8 @@ match ExtraWhitespace /\s\+$/
 set list listchars=tab:»-,trail:-,extends:$,nbsp:=
 " }}}
 
+" Column line 80 highlight {{{
+set colorcolumn=+1
+hi ColorColumn ctermbg=0
+set colorcolumn=80
+" }}}
