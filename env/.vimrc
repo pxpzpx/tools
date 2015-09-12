@@ -45,9 +45,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+Plugin 'The-NERD-tree'
+Plugin 'The-NERD-Commenter'
+
+Plugin 'ctrlp.vim'
+Plugin 'Tagbar'
 
 Plugin 'bling/vim-airline'
 
@@ -58,8 +60,6 @@ Plugin 'autoload_cscope.vim'
 Plugin 'tpope/vim-unimpaired'         " Easy way to navigate the quickfix list
 
 Plugin 'easymotion/vim-easymotion'
-
-Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'Mark--karkat'
 " All of your Plugins must be added before the following line
