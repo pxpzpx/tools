@@ -249,6 +249,6 @@ set list listchars=tab:»-,trail:-,extends:$,nbsp:=
 
 " Column line 80 highlight {{{
 set colorcolumn=+1
-hi ColorColumn ctermbg=0
+hi ColorColumn ctermbg=235
 set colorcolumn=80
 " }}}
