@@ -235,10 +235,17 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 " }}}
 
-" Color scheme {{{
+" Solarized  Color scheme {{{
 set background=dark
-colorscheme solarized
 let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+
+colorscheme solarized
+" }}}
+
+" Molokai Color scheme {{{
+" colorscheme molokai
+" let g:molokai_original = 0
 " }}}
 
 " Whitespace & EndingSpace Highlight {{{
