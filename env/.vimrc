@@ -236,8 +236,9 @@ map  N <Plug>(easymotion-prev)
 " }}}
 
 " Color scheme {{{
-colorscheme molokai
-let g:molokai_original = 0
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 " }}}
 
 " Whitespace & EndingSpace Highlight {{{
