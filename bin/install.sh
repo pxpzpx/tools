@@ -17,9 +17,9 @@ git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/colors/vi
 cp ~/.vim/colors/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/solarized.vim
 rm -rf ~/.vim/colors/vim-colors-solarized
 
-echo "Downloading... color scheme for vim"
+echo "Downloading... molokai color scheme for vim"
 git clone https://github.com/tomasr/molokai.git ~/.vim/colors/molokai
-cp ~/.vim/colors/molokai.git/colors/molokai.vim ~/.vim/colors/molokai.vim
+cp ~/.vim/colors/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
 rm -rf ~/.vim/colors/molokai
 
 echo "Install Vundle Plugins"
