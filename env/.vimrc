@@ -45,11 +45,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'The-NERD-tree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'The-NERD-Commenter'
 
-Plugin 'ctrlp.vim'
-Plugin 'Tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 
 Plugin 'bling/vim-airline'
 
