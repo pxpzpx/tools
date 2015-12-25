@@ -38,10 +38,6 @@ make install
 echo "Remove install files"
 rm -rf $HOME/$global_archive
 rm -rf $HOME/$global_version
-
 echo "global install done"
-
-echo "Reload .bashrc"
-source ~/.bashrc
 
 echo "Completed!"
