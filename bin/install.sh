@@ -14,7 +14,6 @@ make
 make install
 
 echo "Remove install files"
-rm $global_archive
 rm -rf $HOME/$global_version
 
 echo "export PATH+=:$HOME/bin/glboal/bin" >> ~/.bashrc
