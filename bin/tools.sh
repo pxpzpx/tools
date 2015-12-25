@@ -1,5 +1,5 @@
 #/bin/bash
-export PATH=$PATH:~/tools/bin
+export PATH+=:$HOME/tools/bin:$HOME/tools/bin/global
 
 # sources {{{
 source acd_func.sh
