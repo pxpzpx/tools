@@ -5,9 +5,6 @@ echo "source ~/tools/env/.vimrc" >> ~/.vimrc
 echo "Append config tools.sh"
 echo "source ~/tools/bin/tools.sh" >> ~/.bashrc
 
-echo "Reload .bashrc"
-source ~/.bashrc
-
 echo "Downloading... Vundle"
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
@@ -43,5 +40,8 @@ rm -rf $HOME/$global_archive
 rm -rf $HOME/$global_version
 
 echo "global install done"
+
+echo "Reload .bashrc"
+source ~/.bashrc
 
 echo "Completed!"
