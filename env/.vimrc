@@ -48,6 +48,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'The-NERD-Commenter'
 
+Plugin 'gtags.vim'
+
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 
@@ -55,8 +57,6 @@ Plugin 'bling/vim-airline'
 
 Plugin 'Shougo/neocomplete.vim'       " Provides keyword completion system
 
-Plugin 'chazy/cscope_maps'
-Plugin 'autoload_cscope.vim'
 Plugin 'tpope/vim-unimpaired'         " Easy way to navigate the quickfix list
 
 Plugin 'easymotion/vim-easymotion'
@@ -172,6 +172,13 @@ nnoremap <silent> <F8> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " }}}
 
+" gnu global settings {{{
+" gnu global 자동 갱신 설정
+nmap <C-\><C-]> :GtagsCursor<CR>
+let Gtags_Auto_Update=1
+let Gtags_No_Auto_Jump=1
+" }}}
+
 " Tagbar settings {{{
 nnoremap <silent> <F9> :TagbarToggle<CR>
 " }}}
@@ -181,39 +188,6 @@ map <C-p> :CtrlPLastMode --dir<CR>
 
 let g:ctrlp_cmd = 'CtrlP --dir'
 let g:ctrlp_working_path_mode = 'ra'
-
-" non github repos
-let g:ctrlp_by_filename = 1
-let g:ctrlp_root_markers = ['cscope.files']
-let g:ctrlp_user_command = ['cscope.files', 'cat %s/cscope.files']
-let g:ctrlp_max_files = 0
-let g:ctrlp_lazy_update = 1
-let g:ctrlp_max_height = 20
-
-let g:ctrlp_set_cwd = 0
-function! s:setcwd()
-  if exists('g:ctrlp_prj_dir') | retu | en
-  let cph = expand('%:p:h', 1)
-  if cph =~ '^.\+://' | retu | en
-  for mkr in ['cscope.files']
-    let wd = call('find'.(mkr =~ '/$' ? 'dir' : 'file'), [mkr, cph.';'])
-    if wd != '' | let &acd = 0 | brea | en
-  endfo
-  let g:ctrlp_prj_dir = fnameescape(wd == '' ? cph : substitute(wd, mkr.'$', '.', ''))
-  echom g:ctrlp_prj_dir
-  exe 'lc!' fnameescape(wd == '' ? cph : substitute(wd, mkr.'$', '.', ''))
-endfunction
-
-autocmd BufEnter * call s:setcwd()
-" }}}
-
-" cscope settings {{{
-if has('cscope')
-    if has('quickfix')
-        set cscopequickfix=s-,c-,d-,i-,t-,e-
-        nnoremap <C-]>s :set cscopequickfix=s+<CR> :cs find s <C-R>=expand("<cword>")<CR><CR>
-    endif
-endif
 " }}}
 
 " airline settings {{{

@@ -1,4 +1,24 @@
 #!/bin/sh
+echo "Install gnu global"
+global_version="global-6.5"
+global_archive=$global_version".tar.gz"
+global_down_url="http://ftp.gnu.org/gnu/global/"$global_archive
+
+mkdir -p $HOME/bin/global
+wget $global_down_url -P $HOME
+tar xvzf $global_archive -C $HOME
+
+cd $HOME/$global_version
+./configure --prefix=$HOME/bin/global
+make
+make install
+
+echo "Remove install files"
+rm $global_archive
+rm -rf $HOME/$global_version
+
+echo "export PATH+=:$HOME/bin/glboal/bin" >> ~/.bashrc
+echo "global install done"
 
 echo "Append config .vimrc"
 echo "source ~/tools/env/.vimrc" >> ~/.vimrc
