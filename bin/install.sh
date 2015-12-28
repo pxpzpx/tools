@@ -22,7 +22,7 @@ echo "Install Vundle Plugins"
 vim -c :PluginInstall -c :qa
 
 MType=`uname`
-if [ "$MType"  = *"CYGWIN"* ]
+if [[ "$MType"  = *"CYGWIN"* ]]
 then
     echo "Cygwin System"
 else
