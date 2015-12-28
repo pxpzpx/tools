@@ -48,7 +48,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'The-NERD-Commenter'
 
-Plugin 'gtags.vim'
+Plugin 'jjangun/gtags.vim'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
