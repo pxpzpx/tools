@@ -1,4 +1,5 @@
 #/bin/bash
+MType=`uname`
 if [[ "$MType"  = *"CYGWIN"* ]]
 then
     export PATH+=:$HOME/tools/bin:$HOME/tools/bin/global/cygwin_bin
