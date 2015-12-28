@@ -1,5 +1,10 @@
 #/bin/bash
-export PATH+=:$HOME/tools/bin:$HOME/tools/bin/global/bin
+if [[ "$MType"  = *"CYGWIN"* ]]
+then
+    export PATH+=:$HOME/tools/bin:$HOME/tools/bin/global/cygwin_bin
+else
+    export PATH+=:$HOME/tools/bin:$HOME/tools/bin/global/bin
+fi
 
 # sources {{{
 source acd_func.sh
