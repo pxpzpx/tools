@@ -23,8 +23,8 @@ vim -c :PluginInstall -c :qa
 
 MType=`uname`
 if echo $Mtype | grep -iq CYGWIN;
-   echo "Cygwin System"
 then
+   echo "Cygwin System"
 else
     echo "Install gnu global"
     global_version="global-6.5"
