@@ -173,8 +173,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " }}}
 
 " gnu global settings {{{
-" gnu global 자동 갱신 설정
-nmap <C-\><C-]> :GtagsCursor<CR>
+nmap <C-]> :GtagsCursor<CR>
+nmap <F2> :Gtags<SPACE>
+nmap <F3> :cn<CR>
+nmap <F4> :cp<CR>
+
 let Gtags_Auto_Update=1
 let Gtags_No_Auto_Jump=1
 " }}}
