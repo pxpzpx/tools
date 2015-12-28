@@ -21,29 +21,23 @@ rm -rf ~/.vim/colors/molokai
 echo "Install Vundle Plugins"
 vim -c :PluginInstall -c :qa
 
-MType=`uname`
-if echo $Mtype | grep -iq CYGWIN;
-then
-   echo "Cygwin System"
-else
-    echo "Install gnu global"
-    global_version="global-6.5"
-    global_archive=$global_version".tar.gz"
-    global_down_url="http://ftp.gnu.org/gnu/global/"$global_archive
+echo "Install gnu global"
+global_version="global-6.5"
+global_archive=$global_version".tar.gz"
+global_down_url="http://ftp.gnu.org/gnu/global/"$global_archive
 
-    mkdir -p $HOME/tools/bin/global
-    wget $global_down_url -P $HOME
-    tar xvzf $global_archive -C $HOME
+mkdir -p $HOME/tools/bin/global
+wget $global_down_url -P $HOME
+tar xvzf $global_archive -C $HOME
 
-    cd $HOME/$global_version
-    ./configure --prefix=$HOME/tools/bin/global
-    make
-    make install
+cd $HOME/$global_version
+./configure --prefix=$HOME/tools/bin/global
+make
+make install
 
-    echo "Remove install files"
-    rm -rf $HOME/$global_archive
-    rm -rf $HOME/$global_version
-    echo "global install done"
-fi
+echo "Remove install files"
+rm -rf $HOME/$global_archive
+rm -rf $HOME/$global_version
+echo "global install done"
 
 echo "Completed!"
