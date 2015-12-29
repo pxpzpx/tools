@@ -2,7 +2,7 @@
 MType=`uname`
 if [[ "$MType"  = *"CYGWIN"* ]]
 then
-    export PATH+=:$HOME/tools/bin:$HOME/tools/bin/global/cygwin_bin
+    export PATH+=:$HOME/tools/bin:$HOME/tools/bin/global/bin
 else
     export PATH+=:$HOME/tools/bin:$HOME/tools/bin/global/bin
 fi
