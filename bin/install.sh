@@ -29,6 +29,9 @@ rm -rf $HOME/.vim/colors/molokai
 echo "Install Vundle Plugins"
 vim -c :PluginInstall -c :qa
 
+echo "Install YouCompleteMe"
+sh ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+
 if [[ "$MType"  = *"CYGWIN"* ]]
 then
     echo "Cygwin System"
