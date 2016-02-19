@@ -57,6 +57,9 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'Shougo/neocomplete.vim'       " Provides keyword completion system
 
+Plugin 'tpope/vim-pathogen'
+Plugin 'scrooloose/syntastic'
+
 Plugin 'tpope/vim-unimpaired'         " Easy way to navigate the quickfix list
 
 Plugin 'easymotion/vim-easymotion'
