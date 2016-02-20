@@ -1,14 +1,8 @@
 #!/bin/sh
 MType=`uname`
 
-if [[ "$MType" = *"CYGWIN"* ]]
-then
-    echo "Append config .vimrc"
-    echo "source $HOME/tools/env/.vimrc" >> $HOME/.vimrc
-else
-    echo "Append config .vimrc_ubuntu_14.04"
-    echo "source $HOME/tools/env/.vimrc_ubuntu_14.04" >> $HOME/.vimrc
-fi
+echo "Append config .vimrc"
+echo "source $HOME/tools/env/.vimrc" >> $HOME/.vimrc
 
 echo "Append config tools.sh"
 echo "source $HOME/tools/bin/tools.sh" >> $HOME/.bashrc
@@ -29,13 +23,13 @@ rm -rf $HOME/.vim/colors/molokai
 echo "Install Vundle Plugins"
 vim -c :PluginInstall -c :qa
 
-if [[ "$MType" != *"CYGWIN"* ]]
+if [ "$MType" != *"CYGWIN"* ]
 then
     echo "Install YouCompleteMe"
     sh ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
 fi
 
-if [[ "$MType" = *"CYGWIN"* ]]
+if [ "$MType" = *"CYGWIN"* ]
 then
     echo "Cygwin System"
     echo "Downloading... Global Win32 Version"
