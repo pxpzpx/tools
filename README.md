@@ -19,6 +19,7 @@ And then modify these lines like bellow in .vim/bundle/YouCompleteMe/third_party
 
 BEFORE Modify:
 def GetCmakeArgs( parsed_args ):
+
   cmake_args = []
   if parsed_args.clang_completer or parsed_args.all_completers:
     cmake_args.append( '-DUSE_CLANG_COMPLETER=ON' )
@@ -35,6 +36,7 @@ def GetCmakeArgs( parsed_args ):
   return cmake_args
 
 AFTER Modify:
+
 def GetCmakeArgs( parsed_args ):
   cmake_args = ['-DEXTERNAL_LIBCLANG_PATH=/usr/lib/libclang.dll.a']
   if parsed_args.clang_completer or parsed_args.all_completers:
