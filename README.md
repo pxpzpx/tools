@@ -17,7 +17,7 @@ Please check bellow comment if you use cygwin.
 You just need to install clang binary in Cygwin setup.exe.
 And then modify these lines like bellow in .vim/bundle/YouCompleteMe/third_party/ycmd/build.py
 
-BEFORE Modify:
+Before modify:
 
     def GetCmakeArgs( parsed_args ):
       cmake_args = []
@@ -32,7 +32,7 @@ BEFORE Modify:
       cmake_args.extend( shlex.split( extra_cmake_args ) )
       return cmake_args
 
-AFTER Modify:
+After modify:
 
     def GetCmakeArgs( parsed_args ):
       cmake_args = ['-DEXTERNAL_LIBCLANG_PATH=/usr/lib/libclang.dll.a']
