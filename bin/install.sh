@@ -25,6 +25,9 @@ vim -c :PluginInstall -c :qa
 
 if [ "$MType" != *"CYGWIN"* ]
 then
+    echo "Install build components"
+    sudo apt-get install build-essential cmake clang python-dev
+
     echo "Install YouCompleteMe"
     sh ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
 fi
@@ -36,6 +39,9 @@ then
     mkdir -p $HOME/tools/bin/global
     git clone https://github.com/jjangun/GLOBAL_Win32.git $HOME/tools/bin/global
 else
+    echo "Install libncurses5"
+    sudo apt-get install libncurses5-dev
+
     echo "Install gnu global"
     global_version="global-6.5.2"
     global_archive=$global_version".tar.gz"
