@@ -58,7 +58,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 
-Plugin 'tpope/vim-pathogen'
+"Plugin 'tpope/vim-pathogen'
 Plugin 'scrooloose/syntastic'
 
 Plugin 'tpope/vim-unimpaired'         " Easy way to navigate the quickfix list
@@ -95,7 +95,7 @@ nnoremap <leader>p :YcmCompleter GetParent<CR>
 " }}}
 
 " vim-pathogen settings {{{
-execute pathogen#infect()
+silent! execute pathogen#infect()
 " }}}
 
 "  syntastic settings {{{
