@@ -58,7 +58,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 
-"Plugin 'tpope/vim-pathogen'
+Plugin 'tpope/vim-pathogen'
 Plugin 'scrooloose/syntastic'
 
 Plugin 'tpope/vim-unimpaired'         " Easy way to navigate the quickfix list
