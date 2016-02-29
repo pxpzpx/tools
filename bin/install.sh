@@ -7,6 +7,8 @@ git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 echo "Install Vundle Plugins"
 vim -c :PluginInstall -c :qa
 
+sleep 3
+
 echo "Downloading... solarized color scheme for vim"
 git clone git://github.com/altercation/vim-colors-solarized.git $HOME/.vim/colors/vim-colors-solarized
 cp $HOME/.vim/colors/vim-colors-solarized/colors/solarized.vim $HOME/.vim/colors/solarized.vim
