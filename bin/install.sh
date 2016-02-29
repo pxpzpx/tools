@@ -35,7 +35,7 @@ then
     sudo apt-get install build-essential cmake clang python-dev
 
     echo "Install YouCompleteMe"
-    sh ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+    ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 fi
 
 if [ "$MType" = *"CYGWIN"* ]
