@@ -17,13 +17,13 @@ rm -rf $HOME/.vim/colors/molokai
 echo "Install Vundle Plugins"
 vim -c :PluginInstall -c :qa
 
-if [ "$MType" = *"Linux"* ]
+if [ "$MType" != *"CYGWIN"* ]
 then
 sudo apt-get install python-pip
 sudo pip install git+git://github.com/Lokaltog/powerline
 fi
 
-if [ "$MType" = *"Linux"* ]
+if [ "$MType" != *"CYGWIN"* ]
 then
     echo "Install build components"
     sudo apt-get install build-essential cmake clang python-dev
