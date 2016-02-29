@@ -1,6 +1,12 @@
 #!/bin/sh
 MType=`uname`
 
+echo "Append config .vimrc"
+echo "source $HOME/tools/env/.vimrc" >> $HOME/.vimrc
+
+echo "Append config tools.sh"
+echo "source $HOME/tools/bin/tools.sh" >> $HOME/.bashrc
+
 echo "Downloading... Vundle"
 git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
@@ -63,11 +69,5 @@ else
     rm -rf $HOME/$global_version
     echo "global install done"
 fi
-
-echo "Append config .vimrc"
-echo "source $HOME/tools/env/.vimrc" >> $HOME/.vimrc
-
-echo "Append config tools.sh"
-echo "source $HOME/tools/bin/tools.sh" >> $HOME/.bashrc
 
 echo "Completed!"
