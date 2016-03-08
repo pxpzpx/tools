@@ -58,9 +58,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 
-Plugin 'tpope/vim-pathogen'
-Plugin 'scrooloose/syntastic'
-
 Plugin 'tpope/vim-unimpaired'         " Easy way to navigate the quickfix list
 
 Plugin 'easymotion/vim-easymotion'
@@ -87,21 +84,6 @@ filetype plugin indent on    " required
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 " }}}
-
-" vim-pathogen settings {{{
-silent! execute pathogen#infect()
-" }}}
-
-"  syntastic settings {{{
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"  }}}
 
 " NERDTree settings {{{
 nnoremap <silent> <F8> :NERDTreeToggle<CR>
