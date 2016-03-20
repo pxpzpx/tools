@@ -12,6 +12,10 @@ git clone https://github.com/jjangun/tools.git ~/tools
 
 sh ~/tools/bin/install.sh
 
+Please check bellow comment if you use linux (ubuntu base).
+-----------
+sudo apt-get install build-essential cmake clang libncurses5-dev libncurses5 python-dev python3-dev
+
 Please check bellow comment if you use cygwin.
 -----------
 You just need to install clang binary in Cygwin setup.exe.
