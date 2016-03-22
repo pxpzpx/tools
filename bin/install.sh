@@ -49,7 +49,7 @@ else
     sudo apt-get install libncurses5-dev
 
     echo "Install gnu global"
-    global_version="global-6.5.2"
+    global_version="global-6.5.3"
     global_archive=$global_version".tar.gz"
     global_down_url="http://ftp.gnu.org/gnu/global/"$global_archive
 
