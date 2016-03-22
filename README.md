@@ -14,7 +14,7 @@ sh ~/tools/bin/install.sh
 
 Please check bellow comment if you use linux (ubuntu base).
 -----------
-sudo apt-get install build-essential cmake clang libncurses5-dev libncurses5 python-dev python3-dev
+sudo apt-get install git build-essential cmake clang libncurses5-dev libncurses5 python-dev python3-dev
 
 Please check bellow comment if you use cygwin.
 -----------
