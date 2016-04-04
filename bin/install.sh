@@ -25,15 +25,11 @@ vim -c :PluginInstall -c :qa
 
 if [ "$MType" != *"CYGWIN"* ]
 then
-sudo apt-get install python-pip
 sudo pip install git+git://github.com/Lokaltog/powerline
 fi
 
 if [ "$MType" != *"CYGWIN"* ]
 then
-    echo "Install build components"
-    sudo apt-get install build-essential cmake clang python-dev
-
     echo "Install YouCompleteMe"
     ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 fi
@@ -45,9 +41,6 @@ then
     mkdir -p $HOME/tools/bin/global
     git clone https://github.com/jjangun/GLOBAL_Win32.git $HOME/tools/bin/global
 else
-    echo "Install libncurses5"
-    sudo apt-get install libncurses5-dev
-
     echo "Install gnu global"
     global_version="global-6.5.3"
     global_archive=$global_version".tar.gz"
