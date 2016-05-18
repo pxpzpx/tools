@@ -47,6 +47,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'The-NERD-Commenter'
+Plugin 'DoxygenToolkit.vim'
 
 Plugin 'jjangun/gtags.vim'
 
@@ -209,4 +210,9 @@ set list listchars=tab:»-,trail:-,extends:$,nbsp:=
 set colorcolumn=+1
 hi ColorColumn ctermbg=234
 set colorcolumn=80
+" }}}
+
+" DoxygenToolkit {{{
+let g:DoxygenToolkit_authorName="Jinhwa Joung"
+nnoremap <silent> <F10> :Dox<CR>
 " }}}
