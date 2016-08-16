@@ -31,7 +31,7 @@ fi
 if [ "$MType" != *"CYGWIN"* ]
 then
     echo "Install YouCompleteMe"
-    ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+    $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer
 fi
 
 if [ "$MType" = *"CYGWIN"* ]
