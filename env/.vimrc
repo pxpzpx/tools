@@ -91,6 +91,8 @@ let g:ycm_show_diagnostics_ui = 0
 let g:ycm_min_num_of_chars_for_completion = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 
+let g:ycm_global_ycm_extra_conf = '~/tool/env/.ycm_extra_conf.py'
+
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
 nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
