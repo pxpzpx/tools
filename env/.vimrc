@@ -93,11 +93,14 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 
 let g:ycm_global_ycm_extra_conf = '~/tool/env/.ycm_extra_conf.py'
 
+nnoremap <silent> <F5> : YcmForceCompileAndDiagnostics<CR>
+
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
 nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>t :YcmCompleter GetType<CR>
 nnoremap <leader>p :YcmCompleter GetParent<CR>
+nnoremap <leader>f :YcmCompleter FixIt<CR>
 " }}}
 
 " Quickfix {{{
