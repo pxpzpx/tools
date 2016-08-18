@@ -223,4 +223,5 @@ set colorcolumn=80
 " DoxygenToolkit {{{
 let g:DoxygenToolkit_authorName="Jinhwa Joung"
 nnoremap <silent> <F10> :Dox<CR>
+nnoremap <silent> <F11> :DoxAuthor<CR>
 " }}}
