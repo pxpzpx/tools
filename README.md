@@ -38,4 +38,4 @@ After modify:
 Then run these command line.
 
     cd ~/.vim/bundle/YouCompleteMe
-    ./install.sh --clang-completer
+    ./install.py --clang-completer
