@@ -34,7 +34,7 @@ then
     $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer
 fi
 
-if [ "$MType" = *"CYGWIN"* ]
+if [ "$MType" == *"CYGWIN"* ]
 then
     echo "Cygwin System"
     echo "Downloading... Global Win32 Version"
