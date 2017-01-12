@@ -210,8 +210,10 @@ let g:molokai_original = 0
 " Whitespace & EndingSpace Highlight {{{
 highlight ExtraWhitespace ctermbg=darkred guibg=#382424
 match ExtraWhitespace /\s\+$/
-" set list listchars=tab:»·,trail:·,extends:$,nbsp:=
 set list listchars=tab:»-,trail:-,extends:$,nbsp:=
+
+" auto remove trailling space when save
+autocmd FileType c,cpp,java,php,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
 " }}}
 
 " Column line 80 highlight {{{
