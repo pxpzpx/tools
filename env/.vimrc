@@ -213,7 +213,15 @@ match ExtraWhitespace /\s\+$/
 set list listchars=tab:»-,trail:-,extends:$,nbsp:=
 
 " auto remove trailling space when save
-autocmd FileType c,cpp,java,php,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    %s/\t/    /g
+    call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 " }}}
 
 " Column line 80 highlight {{{
