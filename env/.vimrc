@@ -216,8 +216,8 @@ set list listchars=tab:»-,trail:-,extends:$,nbsp:=
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
-    %s/\s\+$//e
-    %s/\t/    /g
+    %s/\s\+$//ge
+    %s/\t/    /ge
     call cursor(l, c)
 endfun
 
