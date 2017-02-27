@@ -93,7 +93,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 
 let g:ycm_global_ycm_extra_conf = '~/tool/env/.ycm_extra_conf.py'
 
-nnoremap <silent> <F5> : YcmForceCompileAndDiagnostics<CR>
+nnoremap <silent> <F3> : YcmForceCompileAndDiagnostics<CR>
 
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
@@ -131,12 +131,12 @@ function! ToggleList(bufname, pfx)
   endif
 endfunction
 
-nnoremap <silent> <F6> :call ToggleList("Location List", 'l')<CR>
-nnoremap <silent> <F7> :call ToggleList("Quickfix List", 'c')<CR>
+nnoremap <silent> <F4> :call ToggleList("Location List", 'l')<CR>
+nnoremap <silent> <F5> :call ToggleList("Quickfix List", 'c')<CR>
 " }}}
 
 " NERDTree settings {{{
-nnoremap <silent> <F8> :NERDTreeToggle<CR>
+nnoremap <silent> <F6> :NERDTreeToggle<CR>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " }}}
@@ -149,7 +149,7 @@ let Gtags_No_Auto_Jump=1
 " }}}
 
 " Tagbar settings {{{
-nnoremap <silent> <F9> :TagbarToggle<CR>
+nnoremap <silent> <F7> :TagbarToggle<CR>
 " }}}
 
 " ctrlp settings {{{
@@ -232,5 +232,5 @@ set colorcolumn=80
 
 " DoxygenToolkit {{{
 let g:DoxygenToolkit_authorName="Jinhwa Joung <jinhwa.joung@lge.com>"
-nnoremap <silent> <F10> :Dox<CR>
+nnoremap <silent> <F8> :Dox<CR>
 " }}}
