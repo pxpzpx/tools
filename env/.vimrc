@@ -24,6 +24,8 @@ set encoding=utf-8
 set fileencodings=utf-8,euc-kr
 scriptencoding=utf-8
 
+set fileformat=unix
+
 set ignorecase
 set incsearch
 set history=1024
