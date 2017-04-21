@@ -18,7 +18,7 @@ set autoindent
 
 set ruler
 
-syntax on
+syntax enable
 set backspace=indent,eol,start
 set encoding=utf-8
 set fileencodings=utf-8,euc-kr
@@ -68,6 +68,11 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'Mark--karkat'
 
 Plugin 'godlygeek/tabular'
+
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -197,16 +202,31 @@ map  N <Plug>(easymotion-prev)
 " }}}
 
 " Solarized  Color scheme {{{
-"set background=dark
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=0
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=0
 
-"colorscheme solarized
+colorscheme solarized
+let g:airline_theme='badwolf'
+
+" Column line 80 highlight {{{
+set colorcolumn=+1
+hi ColorColumn ctermbg=235
+set colorcolumn=80
+" }}}
+
 " }}}
 
 " Molokai Color scheme {{{
-colorscheme molokai
-let g:molokai_original = 0
+"colorscheme molokai
+"let g:molokai_original = 0
+
+" Column line 80 highlight {{{
+"set colorcolumn=+1
+"hi ColorColumn ctermbg=234
+"set colorcolumn=80
+" }}}
+
 " }}}
 
 " Whitespace & EndingSpace Highlight {{{
@@ -224,12 +244,6 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-" }}}
-
-" Column line 80 highlight {{{
-set colorcolumn=+1
-hi ColorColumn ctermbg=234
-set colorcolumn=80
 " }}}
 
 " DoxygenToolkit {{{
