@@ -15,7 +15,11 @@ vim -c :PluginInstall -c :qa
 
 if [ "$MType" != *"CYGWIN"* ]
 then
-sudo pip install git+git://github.com/Lokaltog/powerline
+pip install --user git+git://github.com/powerline/powerline
+
+echo "export PATH+=:$HOME/.local/bin" >> $HOME/.bashrc
+echo "powerline-daemon -q" >> $HOME/.bashrc
+echo "source $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh" >> $HOME/.bashrc
 fi
 
 if [ "$MType" != *"CYGWIN"* ]
