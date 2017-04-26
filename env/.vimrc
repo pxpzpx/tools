@@ -52,6 +52,7 @@ Plugin 'The-NERD-Commenter'
 Plugin 'DoxygenToolkit.vim'
 
 Plugin 'jjangun/gtags.vim'
+Plugin 'mileszs/ack.vim'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
@@ -153,6 +154,12 @@ nmap <C-]> :GtagsCursor<CR>
 
 let Gtags_Auto_Update=1
 let Gtags_No_Auto_Jump=1
+" }}}
+
+" ack settings {{{
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 " }}}
 
 " Tagbar settings {{{
