@@ -72,7 +72,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -201,7 +201,7 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 " }}}
 
-" Solarized  Color scheme {{{
+" Color scheme {{{
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=0
@@ -213,18 +213,6 @@ let g:airline_theme='badwolf'
 set colorcolumn=+1
 hi ColorColumn ctermbg=235
 set colorcolumn=80
-" }}}
-
-" }}}
-
-" Molokai Color scheme {{{
-"colorscheme molokai
-"let g:molokai_original = 0
-
-" Column line 80 highlight {{{
-"set colorcolumn=+1
-"hi ColorColumn ctermbg=234
-"set colorcolumn=80
 " }}}
 
 " }}}
