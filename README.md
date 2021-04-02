@@ -43,5 +43,7 @@ Then run these command line.
 YouCompleteMe unavailable: requires Vim 8.1.2269+. Error 시에 Go to youcompleteme directory
 
 git checkout d98f896
+
 git submodule update --init --recursive
+
 ./install.py
